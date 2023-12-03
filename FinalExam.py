@@ -1,5 +1,5 @@
 class User:
-    account_num=5000
+    account_num=1000
     def __init__(self, username, initial_balance,mobile,pin,email):
         self.username = username
         self.balance = initial_balance
@@ -109,12 +109,12 @@ class Admin:
 customer_dict = {}              # use account no. as key and class object(customer account) as value
 mobile_acc_link = {}   # use mobile no. as key and store account no. as value, for linking purpose
 Nazmul=Admin()
-sami=User("Sami",29489,"018",3333,"kfj@gmail.com")
-Nazmul.balance+=sami.check_balance()
-customer_dict[sami.ac_num] = sami                 # acct. no. stored as key and oject as value
-mobile_acc_link[sami.mobile] = sami.ac_num   
+Sabbir=User("Sabbir",12321,"01800500702",3333,"Topper@gmail.com")
+Nazmul.balance+=Sabbir.check_balance()
+customer_dict[Sabbir.ac_num] = Sabbir                 # acct. no. stored as key and oject as value
+mobile_acc_link[Sabbir.mobile] = Sabbir.ac_num   
 
-Nazmul.user.append(sami)
+Nazmul.user.append(Sabbir)
 def Admin_pannel():
     Nazmul.create_Admin("Nazmul Hassan","01722854779",1969)
     Nazmul.check_total_balance()
